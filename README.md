@@ -3,4 +3,4 @@ docker-norikra
 
 Dockerfile for norikra
 
-    docker run matsuu/norikra
+    docker run --detach --publish-all --name norikra matsuu/norikra
