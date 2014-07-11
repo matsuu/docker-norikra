@@ -8,4 +8,7 @@ RUN gem install norikra --no-ri --no-rdoc
 
 EXPOSE 26571 26578
 
-CMD ["norikra", "start"]
+VOLUME /var/norikra
+
+#CMD ["norikra", "start"]
+CMD ["norikra", "start", "--stats=/var/norikra/stats.json", "--dump-stat-interval=60"]
