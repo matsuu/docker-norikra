@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t the-image .
+  - docker run --detach --publish-all --name norikra the-image
+  - docker ps -f name=norikra
